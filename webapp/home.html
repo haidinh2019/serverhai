@@ -10,7 +10,7 @@
 			<!-- cục giới thiệu -->
 			<div class="list-group-item list-group-item-home">
 				<font color="FF0000">
-				<h2>WEB SERVER ĐIỀU KHIỂN THIẾT BỊ
+					<h2><b>WEB SERVER ĐIỀU KHIỂN THIẾT BỊ</b>
 				</h2>
 			     </font>
 			</div>
@@ -21,21 +21,12 @@
 					<i class="fa fa-gamepad feature-icon text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">Cảm biến mưa</h3>
-					Kết quả: {{CamBienMua}}
-				</div>
-			</div>
-			
-			<!-- Cập nhật cảm biến -->
-			<div class="list-group-item list-group-item-home">
-				<div>
-					<i class="fa fa-tachometer feature-icon  text-primary"></i>
-				</div>
-				<div>
-					<h3 class="home-heading">Cập nhập cảm biến</h3>
-					<button class="button" ng-click="updateSensor()">
+					<h3 class="home-heading"><b>Cảm biến mưa</b></h3>
+					<button style="color:red;height:35px;border-radius:10px;" class="button" ng-click="updateSensor()">
 						Cập nhật cảm biến
 					</button>
+                                        <br> <br>
+					Kết quả: {{CamBienMua}}
 				</div>
 			</div>
 			
@@ -45,7 +36,7 @@
 					<i class="fa fa-tachometer feature-icon  text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">Servo</h3>
+					<h3 class="home-heading"><b>Servo</b></h3>
 					<input type="text" class="input text" ng-model="servoPosition" ng-change="updateServo(servoPosition)" />
 				</div>
 			</div>
@@ -56,7 +47,7 @@
 					<i class="fa fa-tachometer feature-icon  text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">LCD </h3>
+					<h3 class="home-heading"><b>LCD <b></h3>
 					<input type="text" class="input text" ng-model="lcd[0]" ng-change="updateLCD()" />
 					<input type="text" class="input text" ng-model="lcd[1]" ng-change="updateLCD()" />
 				</div>
@@ -69,7 +60,7 @@
 					<i class="fa fa-tachometer feature-icon  text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">TRẠNG THÁI LED</h3>
+					<h3 class="home-heading"><b>Trạng thái LED</b></h3>
 					<div ng-repeat="led_value in leds_status  track by $index">
 						Đèn LED  {{$index}} đang {{led_value ? "Bật" : "Tắt"}}. <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-change="changeLED()" ng-model="leds_status[$index]" />
 					</div>
@@ -79,7 +70,10 @@
 			
 			
 			
-			
+			<i>
+                     <marquee width="100%" behavior="scroll">  
+                          Mô hình Web Server điều khiển thiết bị - Thiết kế: Đinh Văn Hải
+                    </marquee>
 			
 			
 		</div>
