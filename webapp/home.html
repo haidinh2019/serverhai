@@ -1,87 +1,128 @@
-<div class="scrollable">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+          body{
+               
+               font-family: Arial, Tahoma;
+               font-size: 12px;
+            }
+ 
+</style>
+
+<body style="background-color:#C9EDF6;>
+
+<script>
+   function nutON() {
+      document.getElementById('haion').value ='ON';
+      document.getElementById('haion').style.color ="blue";
+      document.getElementById('haion').style.background ="red";
+      document.getElementById('haioff').style.background ="white";
+      document.getElementById('haioff').style.color ="black";
+      return false; 
+ }
+
+
+function nutOFF() {
+      document.getElementById('haioff').value ='OFF';
+      document.getElementById('haioff').style.color ="red";
+      document.getElementById('haioff').style.background ="blue";
+       document.getElementById('haion').style.background ="white";
+        document.getElementById('haion').style.color ="black";
+      return false; 
+ }
+</script>
+
+
+
+
+
+<div   class="scrollable">
 	<div class="scrollable-content">
 		<div class="list-group text-center">
 			<!-- cục giới thiệu -->
 			<div class="list-group-item list-group-item-home">
-				<h1>Socket Client Webapp <small>1.0</small>
-				</h1>
+				<font color="FF0000">
+				<h2><b>WEB SERVER ĐIỀU KHIỂN THIẾT BỊ </h2>	
+				
+				</font>
 			</div>
+
+                        <font color="008B00">
 			
-			<!-- Cục cảm biến mưa -->
+			<!-- Cảm biến mưa -->
 			<div class="list-group-item list-group-item-home">
 				<div>
 					<i class="fa fa-gamepad feature-icon text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">Cảm biến mưa</h3>
-					Kết quả: {{CamBienMua}}
-				</div>
-			</div>
-			
-			<!-- Cục cập nhập giá trị cảm biến -->
-			<div class="list-group-item list-group-item-home">
-				<div>
-					<i class="fa fa-tachometer feature-icon  text-primary"></i>
-				</div>
-				<div>
-					<h3 class="home-heading">Cập nhập cảm biến</h3>
-					<button class="button" ng-click="updateSensor()">
-						Nhấn vô dể cập nhập giá trị cảm biến
+                                       
+					<h3 class="home-heading"><b> Cảm biến mưa</b></h3>
+                                        <button style="color:red;height:35px;border-radius:10px;" class="button" ng-click="updateSensor()">
+						Cập nhật cảm biến
 					</button>
+                                        <br> <br>
+					Kết quả: {{CamBienMua}}
+                                          
 				</div>
 			</div>
 			
-			<!-- Cục cập nhập giá trị servo -->
+			
+			
+			<!-- Cập nhật servo -->
 			<div class="list-group-item list-group-item-home">
 				<div>
 					<i class="fa fa-tachometer feature-icon  text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">Cập nhập giá trị servo</h3>
+					<h3 class="home-heading"><b>Cập nhập servo</b></h3>
 					<input type="text" class="input text" ng-model="servoPosition" ng-change="updateServo(servoPosition)" />
 				</div>
 			</div>
 			
-			<!-- Cục thay đổi chữ trên LCD-->
+			<!-- LCD-->
 			<div class="list-group-item list-group-item-home">
 				<div>
 					<i class="fa fa-tachometer feature-icon  text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">Cập nhập giá trị LCD </h3>
+					<h3 class="home-heading"><b>Hiển thị lên LCD </b></h3>
 					<input type="text" class="input text" ng-model="lcd[0]" ng-change="updateLCD()" />
 					<input type="text" class="input text" ng-model="lcd[1]" ng-change="updateLCD()" />
 				</div>
 			</div>
 			
 			
-			<!-- Cục thay đổi trạng thái LED -->
+			<!-- Trạng thái LED -->
 			<div class="list-group-item list-group-item-home">
 				<div>
 					<i class="fa fa-tachometer feature-icon  text-primary"></i>
 				</div>
 				<div>
-					<h3 class="home-heading">TRẠNG THÁI ĐÈN LED</h3>
+					<h3 class="home-heading"><b>ĐÈN LED</b></h3>
 					<div ng-repeat="led_value in leds_status  track by $index">
-						Đèn LED thứ {{$index}} đang {{led_value ? "Bật" : "Tắt"}}. <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-change="changeLED()" ng-model="leds_status[$index]" />
+                                                                                               
+					Đèn LED thứ {{$index}} : đang {{led_value ? "Bật" : "Tắt"}}. <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-change="changeLED()" ng-model="leds_status[$index]" />
 					</div>
 				</div>
 			</div>
+                        
+                     
 			
-			<!-- Cục cập nhập giá trị nút nhấn! -->
-			<div class="list-group-item list-group-item-home">
-				<div>
-					<i class="fa fa-tachometer feature-icon  text-primary"></i>
-				</div>
-				<div>
-					<h3 class="home-heading">TRẠNG THÁI mấy cái NÚT NHẤN</h3>
-					<div ng-repeat="button_value in buttons  track by $index">
-						Nút nhấn {{$index}} đang {{button_value ? "THẢ" : "GIỮ"}}
-					</div>
-				</div>
-			</div>
+			</font>
+                      <br>
+                    <font color="#0B610B" size="5">
+                    <i>
+                     <marquee width="100%" behavior="scroll">  
+                          Mô hình Web Server điều khiển thiết bị - Thiết kế: Đinh Văn Hải
+                    </marquee>
 			
-			
+			</font>
 		</div>
 	</div>
 </div>
+	
+	
+
+</body>
+</html>
