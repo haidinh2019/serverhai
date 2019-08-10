@@ -13,28 +13,29 @@
        
       <tr>
        <td colspan="4" align="center"> 
-	       
+	       <font color="008B00">
 	       <h3 class="home-heading"><b>Cảm biến mưa</b></h3>
 		<button style="color:red;height:35px;border-radius:10px;" class="button" ng-click="updateSensor()">
 			Cập nhật cảm biến
 		</button>
                  <br> <br>
 		 Kết quả: {{CamBienMua}}       
-	       
+	       </font>
 	</td>
        
      </tr>
      <tr>
        <td colspan="4" align="center"> 
-	     
+	     <font color="008B00">
 	    <h3 class="home-heading"><b>Servo</b></h3>
 	    <input type="text" class="input text" ng-model="servoPosition" ng-change="updateServo(servoPosition)" /> 
-	     
+	       </font>
 	     
 	</td>
     </tr>
     <tr>
        <td colspan="4" align="center"> 
+	       <font color="008B00">
 	       <h3 class="home-heading"><b>LCD <b></h3>
 		<input type="text" class="input text" ng-model="lcd[0]" ng-change="updateLCD()" />
 		<input type="text" class="input text" ng-model="lcd[1]" ng-change="updateLCD()" />
@@ -44,7 +45,7 @@
 		Đèn LED  {{$index}} đang {{led_value ? "Bật" : "Tắt"}}. <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-change="changeLED()" ng-model="leds_status[$index]" />
 		</div>
 		 
-	    
+	        </font?
 	    
 	
 	    
